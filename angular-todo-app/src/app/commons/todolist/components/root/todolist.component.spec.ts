@@ -1,6 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  async,
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
 
-import { TodolistComponent } from './todolist.component';
+// modules
+import {HeaderModule} from "app/commons/todolist/components/header";
+import {ContentModule} from "app/commons/todolist/components/content";
+import {FooterModule} from "app/commons/todolist/components/footer";
+
+// testig component
+import {TodolistComponent} from './todolist.component';
+import {CommonModule} from "@angular/common";
 
 describe('TodolistComponent', () => {
   let component: TodolistComponent;
@@ -8,7 +19,15 @@ describe('TodolistComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodolistComponent ]
+      declarations: [
+        TodolistComponent
+      ],
+      imports: [
+        CommonModule,
+        HeaderModule,
+        ContentModule,
+        FooterModule
+        ]
     })
     .compileComponents();
   }));

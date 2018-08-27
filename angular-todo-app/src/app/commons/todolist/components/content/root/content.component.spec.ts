@@ -1,6 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async,
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
 
-import { ContentComponent } from './content.component';
+import {ContentComponent} from './content.component';
+import {TodoListItemComponent} from "../todo-list-item";
 
 describe('ContentComponent', () => {
   let component: ContentComponent;
@@ -8,7 +12,10 @@ describe('ContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContentComponent ]
+      declarations: [
+        ContentComponent,
+        TodoListItemComponent
+      ]
     })
     .compileComponents();
   }));

@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import {Todo} from "../../../entity";
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent  {
 
-  constructor() { }
+  @Input()
+  todos: Todo[];
 
-  ngOnInit() {
+  constructor() {
   }
 
 }

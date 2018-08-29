@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {Todo} from "../../../entity";
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent {
+  @Input()
+  todos: Todo[];
 
-  constructor() { }
+  @Output()
+  remove: EventEmitter<Todo> = new EventEmitter();
 
-  ngOnInit() {
+  @Output()
+  toggleComplete: EventEmitter<Todo> = new EventEmitter();
+
+  constructor() {
+  }
+
+  onToggleTodoComplete(todo: Todo) {
+    this.toggleComplete.emit(todo);
+  }
+
+  onRemoveTodo(todo: Todo) {
+    this.remove.emit(todo);
   }
 
 }

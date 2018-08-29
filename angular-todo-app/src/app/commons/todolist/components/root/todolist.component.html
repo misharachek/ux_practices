@@ -1,7 +1,8 @@
 <div class="todoapp-wrapper">
   <mat-card>
-    <app-header></app-header>
-    <app-content></app-content>
-    <app-footer></app-footer>
+    <app-header (add)="onAddTodo($event)"></app-header>
+    <app-content [todos]="todos" (toggleComplete)="onToggleTodoComplete($event)"
+                 (remove)="onRemoveTodo($event)"></app-content>
+    <app-footer [todos]="todos"></app-footer>
   </mat-card>
 </div>

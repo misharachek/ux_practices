@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 
-import {TodoService} from "../../service";
-import {Todo} from "../../entity";
+// servise
+import {TodoService} from 'app/commons/todolist/service';
 
 @Component({
   selector: 'app-todolist',

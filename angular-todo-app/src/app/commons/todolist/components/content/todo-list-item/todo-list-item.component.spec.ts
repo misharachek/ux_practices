@@ -1,6 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  async,
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
 
-import { TodoListItemComponent } from './todo-list-item.component';
+// angular material
+import {
+  MatCheckboxModule,
+  MatIconModule
+} from '@angular/material';
+
+// testing component
+import {TodoListItemComponent} from './todo-list-item.component';
 
 describe('TodoListItemComponent', () => {
   let component: TodoListItemComponent;
@@ -8,7 +19,11 @@ describe('TodoListItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoListItemComponent ]
+      declarations: [ TodoListItemComponent ],
+      imports: [
+        MatCheckboxModule,
+        MatIconModule
+      ]
     })
     .compileComponents();
   }));

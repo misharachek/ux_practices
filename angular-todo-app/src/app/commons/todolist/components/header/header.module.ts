@@ -5,8 +5,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 //angular material
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
+import {
+  MatInputModule,
+  MatButtonModule
+} from '@angular/material';
 
 
 // component

@@ -13,6 +13,7 @@ import {FooterModule} from "./footer";
 // components
 import { TodolistComponent } from './root';
 
+// service
 import {TodoService} from "../service";
 
 @NgModule({

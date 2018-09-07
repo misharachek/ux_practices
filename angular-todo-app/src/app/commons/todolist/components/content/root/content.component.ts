@@ -1,5 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import {Todo} from "../../../entity";
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output
+} from '@angular/core';
+import {Todo} from 'app/commons/todolist/entity';
+import {locales} from './locale';
 
 @Component({
   selector: 'app-content',
@@ -7,6 +13,8 @@ import {Todo} from "../../../entity";
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent {
+  locales = locales;
+
   @Input()
   todos: Todo[];
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 // angular material
 import {MatCardModule} from '@angular/material/card';
@@ -12,6 +13,9 @@ import {FooterModule} from "./footer";
 // components
 import { TodolistComponent } from './root';
 
+// service
+import {TodoService} from "../service";
+
 @NgModule({
   imports: [
     // angular material
@@ -21,8 +25,11 @@ import { TodolistComponent } from './root';
     CommonModule,
     HeaderModule,
     ContentModule,
-    FooterModule
+    FooterModule,
+
+    FormsModule,
   ],
+  providers: [TodoService],
   declarations: [TodolistComponent],
   exports: [TodolistComponent]
 })

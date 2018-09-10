@@ -1,10 +1,21 @@
-import {async,
+import {
+  async,
   ComponentFixture,
   TestBed
 } from '@angular/core/testing';
 
+// angular material
+import {
+  MatDividerModule,
+  MatCheckboxModule,
+  MatIconModule
+} from '@angular/material';
+
+// child
+import {TodoListItemComponent} from '../todo-list-item';
+
+// testing component
 import {ContentComponent} from './content.component';
-import {TodoListItemComponent} from "../todo-list-item";
 
 describe('ContentComponent', () => {
   let component: ContentComponent;
@@ -15,6 +26,11 @@ describe('ContentComponent', () => {
       declarations: [
         ContentComponent,
         TodoListItemComponent
+      ],
+      imports: [
+        MatDividerModule,
+        MatCheckboxModule,
+        MatIconModule,
       ]
     })
     .compileComponents();

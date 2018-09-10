@@ -8,6 +8,7 @@ import {TodolistModule} from "./commons/todolist/components";
 
 // testing component
 import { AppComponent } from './app.component';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({

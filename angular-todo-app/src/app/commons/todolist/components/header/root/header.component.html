@@ -1,13 +1,26 @@
 <div class="row">
+  <div class="col-md-1"></div>
 
-  <div class="col-md-7 col-md-offset-1">
-    <mat-form-field class="todo-form">
-      <input matInput #message maxlength="256" placeholder="Message">
-      <mat-hint align="end">{{message.value.length}} / 100</mat-hint>
+  <div class="col-md-7">
+    <mat-form-field class="header-input">
+      <input matInput
+             required pattern=".+"
+             #name="ngModel"
+             placeholder="{{locales.HeaderPlaceholderTitle}}"
+             [(ngModel)]="newTodo.title">
     </mat-form-field>
   </div>
 
-  <div class="col-md-2 col-md-offset-1">
-    <button mat-raised-button color="primary">Primary</button>
+  <div class="col-md-1"></div>
+  <div class="col-md-2">
+    <button class="header-add-button"
+            mat-raised-button
+            color="primary"
+            [disabled]="name.invalid"
+            (click)="addTodo()">
+      {{locales.AddButtonTtitle}}
+    </button>
   </div>
+
+  <div class="col-md-1"></div>
 </div>

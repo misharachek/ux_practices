@@ -3,6 +3,7 @@ import {
   ComponentFixture,
   TestBed
 } from '@angular/core/testing';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 //angular material
@@ -20,7 +21,6 @@ describe('HeaderComponent', () => {
       declarations: [HeaderComponent],
       imports: [
         BrowserAnimationsModule,
-        // angular material
         MatInputModule,
         MatButtonModule]
     })
